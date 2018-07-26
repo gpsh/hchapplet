@@ -1,0 +1,357 @@
+.contaner {
+    /* text-align: center; */
+    height: auto;
+    width: 100%;
+    /* overflow: hidden; */
+    background: #f0f0f0;
+}
+
+.header-block {
+    width: 100%;
+    height: 350rpx;
+}
+
+.header-bar {
+    width: 680rpx;
+    height: 80rpx;
+    background: #fafafa;
+    padding: 10rpx 20rpx;
+    margin: 0 auto;
+    top: 30rpx;
+    z-index: 8;
+    position: relative;
+    border-radius: 8rpx;
+}
+
+.header-bar .map-button {
+    font-size: 28rpx;
+    color: #666;
+    padding: 10rpx 20rpx;
+    position: absolute;
+    left: 0;
+    width: 135rpx;
+    z-index: 9;
+}
+
+.header-bar .section {
+    width: 545rpx;
+    height: auto;
+    right: 0;
+    position: absolute;
+    padding: 5rpx;
+}
+
+.header-bar .section input {
+    border-left: 2px solid #e0e0e0;
+    width: 100%;
+    height: auto;
+    padding: 0 0 0 80rpx;
+    font-weight: lighter;
+    font-size: 24rpx;
+}
+
+.header-bar .section  image {
+    display: block;
+    position: absolute;
+    width: 60rpx;
+    height: 60rpx;
+    z-index: 9;
+}
+
+.header-bar .section  image.serch {
+    top: 15rpx;
+    left: 30rpx;
+    width: 26rpx;
+    height: 26rpx;
+}
+
+.header-bar .section  image.mike {
+    top: 10rpx;
+    right: 30rpx;
+    width: 26rpx;
+    height: 34rpx;
+}
+
+.swiper-index {
+    width: 100%;
+    height: 350rpx;
+    position: absolute;
+    top: 0;
+}
+
+.swiper-index .slide-image {
+    width: 100%;
+    height: 350rpx;
+}
+/* 车辆品牌说明 */
+.cartip{
+    width: 100%;
+    padding: 30rpx 24rpx;
+    background-color: #ffffff;
+}
+.cartip .car-tip-text{
+    color: #333333;
+    font-size: 34rpx;
+}
+.cartip .car-tip-lable{
+    color: #999999;
+    font-size: 24rpx;
+}
+.cartip .display-block{
+    display: block;
+}
+.cartip .padding-10{
+    padding: 10rpx 0
+}
+.cartip .color-red{
+    color: #ff6e61
+}
+.cartip .text-deco{
+    text-decoration: line-through;
+    margin-left: 30rpx;
+}
+/* 车辆基本信息 */
+.carbasic {
+    width: 100%;
+    padding: 20rpx 24rpx;
+    background-color: #fff;
+}
+.carbasic-top{
+    margin-top: 20rpx;
+    padding-bottom: 0
+}
+.carbasic .basic-title{
+    font-size: 24rpx;
+    color: #333;
+    padding: 20rpx 0;
+}
+.carbasic .basic-ul{
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.carbasic-border .basic-ul{
+     border-bottom: 1rpx solid #f0f0f0;
+}
+.carbasic .basic-li{
+    width: 25%;
+    float: left;
+}
+.carbasic .basic-li .li-data{
+    font-size: 30rpx;
+    color: #333;
+    display: block;
+    padding-top: 20rpx;
+}
+.carbasic .basic-li .li-title{
+    font-size: 24rpx;
+    color: #999999;
+    display: block;
+    padding: 20rpx 0 40rpx 0;
+}
+.carbasic .basic-li.text-center{
+    text-align: center;
+}
+.carbasic .basic-li .li-img{
+    width: 80rpx;
+    height: 80rpx;
+    display: block;
+    margin: 0 auto;
+}
+.carbasic .basic-li .li-label{
+    color: #333;
+    font-size: 26rpx;
+}
+.carbasic .padding-10{
+    padding: 20rpx 0;
+}
+.btn-datalis{
+    width: 100%;
+    padding: 20rpx 0 40rpx 0;
+    color: #666666;
+    font-size: 30rpx;
+    background-color: #fff;
+    text-align: center;
+}
+/* 公司介绍 */
+.company{
+    width: 100%;
+    margin-top: 20rpx;
+    background-color: #fff;
+    padding: 20rpx 24rpx;
+}
+.company .company-man{
+    padding: 20rpx 0;
+}
+.company .company-man .man-info{
+    width: 522rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+.company .man-info .man-info-head{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.company .man-info .man-info-bar{
+    width: 442rpx;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 24rpx; 
+}
+.company .man-info-bar .info-comname{
+    font-size: 30rpx;
+    color: #333;
+    display: block;
+}
+.company .man-info-bar .info-name{
+    font-size: 24rpx;
+    color: #999;
+}
+.company .man-info-bar .info-num{
+    margin-left: 30rpx;
+}
+.company .company-man .man-btn{
+    width: 180rpx;
+    padding: 10rpx 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.company .man-btn .btn-look{
+    width: 100%;
+    height: 60rpx;
+    background-color: #03c285;
+    color: #fffefe;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 60rpx;
+}
+.company .bar-ul .bar-li{
+    width: 33.33%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+}
+.company .bar-ul .bar-li .border{
+    position: absolute;
+    width: 2rpx;
+    height: 60rpx;
+    right: 0;
+    top: 15rpx;
+    border-right: 1rpx solid #e5e5e5;
+}
+.company .bar-ul .bar-li:last-child .border{
+    display: none;
+}
+.company .bar-ul .bar-li .li-data{
+    font-size: 30rpx;
+    color: #333;
+    display: block;
+} 
+.company .bar-ul .bar-li .li-title{
+    font-size: 24rpx;
+    color: #999;
+}
+.company .man-btn{
+    font-size: 30rpx;
+    color: f9500;
+}
+.company .man-btn .icon-hous{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: 2rpx;
+}
+/* 常见问题 */
+.helpbar-ul {
+    width: 100%;
+    margin-top: 20rpx;
+    margin-bottom: 140rpx;
+    padding: 20rpx 24rpx;
+    background-color: #fff;
+}
+.helpbar-ul .help-header{
+    font-size: 24rpx;
+    color: #333;
+    padding: 20rpx 0;
+}
+.helpbar-ul .bar-li{
+    width: 33.33%;
+    padding-top: 20rpx;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10rpx;
+}
+.helpbar-ul .bar-li .li-icon{
+    color: #666;
+    width: 10%;
+    font-size:60rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+.helpbar-ul .bar-li .li-title{
+    width: 90%;
+    color: #333;
+    font-size: 30rpx;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* 预约看车 */
+
+.fix-bar{
+    width: 100%;
+    padding: 26rpx 24rpx;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0rpx;
+    border-top: 1rpx solid #e0e0e0;
+}
+.fix-bar .bar-ul{
+    display: inline-block;
+    vertical-align: middle;
+    width: 350rpx;
+}
+.fix-bar .bar-ul .bar-li{
+    width: 33.33%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.fix-bar .bar-ul .bar-li image{
+    width: 36rpx;
+    height: 36rpx;
+    display: block;
+    margin-top: 4rpx;
+    margin-left: 4rpx;
+}
+.fix-bar .bar-ul .bar-li .li-title{
+    color: #666;
+    font-size: 20rpx;
+    display: block;
+    margin-top: 10rpx;
+}
+.fix-bar .bar-btn{
+    display: inline-block;
+    vertical-align: middle;
+    width: 240rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    background-color: #ff6e61;
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+    margin-left: 112rpx;
+}
+
+.bar-hui{
+    width: 100%;
+    margin-top: 20rpx;
+    height: 20rpx;
+}

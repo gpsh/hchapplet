@@ -1,0 +1,95 @@
+<form bindsubmit="formSubmit" id='2' class='contener' bindreset="formReset">
+    <!-- 图片上传区 -->
+    <view class="big-logos upload-img">
+        <view bindtap="upimg" class='img-bar img-add'>
+            <image src='/images/upload/tjzp@3x.png'></image>
+            <text>添加照片</text>
+        </view>
+        <block class="" wx:for="{{img_arr}}">
+            <view class='logoinfo img-bar'>
+                <icon bindtap='deleteImg' data-imgindex='{{index}}' class='delete-img-icon'>
+                    <image src='/images/upload/gb@3x.png'></image>
+                </icon>
+                <image bindtap='previewImage' data-imgindex='{{index}}' src='{{item}}' mode="aspectFill"></image>
+            </view>
+        </block>
+    </view>
+    <!-- 发布车辆 -->
+    <view class='viewul'>
+        <navigator class='viewli' url='../carbrand/carbrand'>
+            <text>品牌车系</text>
+            <label class='viewli-lable icon-right'>
+                <input type='text' placeholder='请输入' value='宝马七系' disabled='true'></input>
+                <image src='/images/upload/arrow@3x.png'></image>
+            </label>
+        </navigator>
+        <view class='viewli'>
+            <text>车型</text>
+            <label class='viewli-lable icon-right'>
+                <input type='text' placeholder='请输入' value='2018款 M760Li xDrive 卓越奢华版'></input>
+            </label>
+        </view>
+        <view class='viewli'>
+            <text>指导价</text>
+            <label class='viewli-lable icon-right'>
+                <input type='text' placeholder='请输入' value='265.00万元'></input>
+            </label>
+        </view>
+        <view class='viewli'>
+            <text>售价</text>
+            <label class='viewli-lable icon-right'>
+                <input type='text' placeholder='请输入' value='260.00万元'></input>
+            </label>
+        </view>
+        <view class='viewli'>
+            <text>低价</text>
+            <label class='viewli-lable icon-right'>
+                <input type='text' placeholder='请输入' value='230.00万元'></input>
+            </label>
+        </view>
+    </view>
+    <!-- 车辆配置 -->
+    <view class='carconfigure'>
+        <text class='carconfigure-text'>车辆配置</text>
+        <textarea placeholder='请输入'></textarea>
+    </view>
+    <view class='viewul'>
+        <view class='viewli'>
+            <text>上牌时间</text>
+            <picker class='viewli-lable icon-right' mode="date" fields="month" start="2000-09-01" end="2018-06-04" bindchange="bindDateChange" value="{{date}}">
+                 <input type='text' class="picker" placeholder='请输入' disabled="true" value='{{date}}' ></input> 
+            </picker>
+        </view>
+        <view class='viewli'>
+            <text>车牌所在地</text>
+            <picker class='viewli-lable icon-right' mode="region" bindchange="bindRegionChange" value="{{region}}"  custom-item="{{customItem}}">
+                 <input type='text' class="picker" placeholder='请输入' disabled="true" value='{{region[0]}}，{{region[1]}}，{{region[2]}}' ></input> 
+            </picker>
+        </view>
+        <view class='viewli'>
+            <text>表显里程</text>
+            <label class='viewli-lable icon-right'>
+                <input type='text' placeholder='请输入' value='1.00万公里'></input>
+            </label>
+        </view>
+        <view class='viewli'>
+            <text>过户次数</text>
+            <label class='viewli-lable icon-right'>
+                <input type='text' placeholder='请输入' value='0'></input>
+            </label>
+        </view>
+        <view class='viewli'>
+            <text>变速箱/档数</text>
+            <label class='viewli-lable icon-right'>
+                <input type='text' placeholder='请输入' value='自动/9档'></input>
+            </label>
+        </view>
+        <view class='viewli'>
+            <text>排放标准</text>
+            <label class='viewli-lable icon-right'>
+                <input type='text' placeholder='请输入' value='国五'></input>
+            </label>
+        </view>
+    </view>
+     <button class='btn btn-submit' formType="submit">发布</button> 
+</form>

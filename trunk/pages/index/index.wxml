@@ -1,0 +1,138 @@
+<!--index.wxml-->
+
+<view class='contaner'>
+    <!-- 头部滚动 -->
+    <view class='header-block'>
+        <view class='header-bar'>
+            <!-- <view class='map-button'>北京 ▼</view> -->
+            <view class="section">
+                <image src='https://www.che3721.com/applet/images/index/sousu@3x.png' data-rjs="3" class='serch'> </image>
+                <input type='text' confirm-type="search" placeholder='搜索您想要的车型'></input>
+                <image src='https://www.che3721.com/applet/images/index/luyin@3x.png' data-rjs="3" bindtap='clicktaphref' class='mike'> </image>
+            </view>
+        </view>
+
+        <swiper class='swiper-index' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" circular="{{circular}}">
+            <block class="img-bar" wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <image src="{{item}}" data-rjs="{{datarjs}}" mode='widthFix' class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- 热卖车型 -->
+    <view class='content-carBar'>
+        <view class='carBar-ul'>
+            <view wx:for="{{cariconlist}}" class='carBar-li'>
+                <image src="https://www.che3721.com/applet/images/cartool/{{item.brandLogo}}"></image>
+                <label>{{item.name}}</label>
+            </view>
+            <view bindtap='clickhref' data-href='/pages/carbrand/carbrand' class='carBar-li'>
+                <image src="https://www.che3721.com/applet/images/index/dazhong@3x.png"></image>
+                <label>更多</label>
+            </view>
+        </view>
+    </view>
+    <!-- 菜单选项 -->
+    <view class='content-menu'>
+        <view class='menu-top'>
+            <view class='menu-top-left' bindtap='clickhref' data-href='/pages/recommend/recommend'>
+                <label>超值推荐</label>
+                <image src='https://www.che3721.com/applet/images/index/cztj_jpg@3x.png'></image>
+            </view>
+            <view bindtap='clickhref' data-href='/pages/upload/upload' class='menu-top-right'>
+                <label>我要卖车</label>
+                <image src='https://www.che3721.com/applet/images/index/wymc_jpg@3x.png'></image>
+            </view>
+        </view>
+        <view class='menu-bottom'>
+            <view class='menu-bottom-li' bindtap='clickhref' data-href='/pages/recommend/recommend'>
+                <label>准
+                    <text>新车</text>
+                </label>
+                <image src='https://www.che3721.com/applet/images/index/zxc_jpg@3x.png'></image>
+            </view>
+            <view class='menu-bottom-li'>
+                <label>汽车
+                    <text>资讯</text>
+                </label>
+                <image src='https://www.che3721.com/applet/images/index/qczx_jpg@3x.png'></image>
+            </view>
+            <view class='menu-bottom-li'>
+                <label>汽车
+                    <text>保险</text>
+                </label>
+                <image src='https://www.che3721.com/applet/images/index/qcbx-jpg@3x.png'></image>
+            </view>
+            <view class='menu-bottom-li'>
+                <label>汽车
+                    <text>贷款</text>
+                </label>
+                <image src='https://www.che3721.com/applet/images/index/qcdk_jpg@3x.png'></image>
+            </view>
+        </view>
+    </view>
+    <!-- 汽车推荐 -->
+    <view class='content-style'>
+        <view class='style-left'>
+            <label>激情超跑</label>
+            <image src='https://www.che3721.com/applet/images/index/jqcp_jpg@3x.png'></image>
+        </view>
+        <view class='style-right'>
+            <view class='style-right-li'>
+                <label>超值SUV</label>
+                <image src='https://www.che3721.com/applet/images/index/czSUV_jpg@3x.png'></image>
+            </view>
+            <view class='style-right-li'>
+                <label>高端商务</label>
+                <image src='https://www.che3721.com/applet/images/index/gdsw_jpg@3x.png'></image>
+            </view>
+        </view>
+    </view>
+    <!-- 每日精选 -->
+    <view class='content-day'>
+        <label class='day-lable'>每日精选</label>
+        <view class='day-ul'>
+            <view class='day-li'>
+                <image src='https://www.che3721.com/applet/images/index/mkl_jpg@3x.png'></image>
+                <view class='day-li-text'>
+                    <label class='day-text-title'>迈凯伦MP4-12c</label>
+                    <label class='day-text-p'>2012年款h红色，棕内饰</label>
+                    <label class='day-text-money'>￥122万
+                        <text class='money-p'>￥150万</text>
+                    </label>
+                </view>
+            </view>
+            <view class='day-li'>
+                <image src='https://www.che3721.com/applet/images/index/dagef_jpg@3x.png'></image>
+                <view class='day-li-text'>
+                    <label class='day-text-title'>迈凯伦MP4-12c</label>
+                    <label class='day-text-p'>2012年款h红色，棕内饰</label>
+                    <label class='day-text-money'>￥122万
+                        <text class='money-p'>￥150万</text>
+                    </label>
+                </view>
+            </view>
+            <view class='day-li'>
+                <image src='https://www.che3721.com/applet/images/index/bm_jpg@3x.png'></image>
+                <view class='day-li-text'>
+                    <label class='day-text-title'>迈凯伦MP4-12c</label>
+                    <label class='day-text-p'>2012年款h红色，棕内饰</label>
+                    <label class='day-text-money'>￥122万
+                        <text class='money-p'>￥150万</text>
+                    </label>
+                </view>
+            </view>
+            <view class='day-li'>
+                <image src='https://www.che3721.com/applet/images/index/ad_jpg@3x.png'></image>
+                <view class='day-li-text'>
+                    <label class='day-text-title'>奥迪-A6L</label>
+                    <label class='day-text-p'>2012年款h红色，棕内饰</label>
+                    <label class='day-text-money'>￥122万
+                        <text class='money-p'>￥150万</text>
+                    </label>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

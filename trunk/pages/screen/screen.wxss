@@ -1,0 +1,84 @@
+.contant{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-top: 1rpx solid #f0f0f0;
+    padding-top: 20rpx;
+}
+.car-bar{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.car-bar .h3{
+    width: 100%;
+    height: auto;
+    padding: 10rpx 24rpx;
+    color: #333;
+    font-size: 24rpx;
+}
+.car-bar .ul{
+    padding: 20rpx 14rpx;
+}
+.car-bar .li{
+    width: 33.33%;
+    height: auto;
+    padding: 10rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+.car-bar .li .btn{
+    width: 100%;
+    line-height: 66rpx;
+    color: #333;
+    font-size: 30rpx;
+    background-color: #fff;
+    border-radius: 5rpx;
+}
+.car-bar .active .btn{
+    color: #ff6e61;
+    width: 100%;
+    background-color: #fff7ed;
+    border-color: #ff6e61;
+}
+.bar-xian{
+    margin: 0 auto;
+    width: 702rpx;
+    margin-top:  20rpx;
+    margin-bottom: 20rpx;
+    padding: 0 24rpx;
+    height: 2rpx;
+    background-color: #f0f0f0;
+}
+.color-hui{
+    color: #999999;
+    font-size: 24rpx;
+}
+
+/* slider */
+.car-bar .body-view{
+    padding: 10rpx 14rpx 0 14rpx;
+    position: relative;
+}
+.slider-style .ul{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 0
+}
+.slider-style .ul .li{
+    width: 16.66%;
+    height: auto;
+    font-size: 28rpx;
+    color: #333;
+    text-align: center;
+}
+.slider2{
+    margin-top: -55rpx;
+}
+.font-right{
+    float: right;
+    color: #ff6e61;
+    font-size: 24rpx;
+    margin-right: 24rpx;
+}

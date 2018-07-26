@@ -1,0 +1,18 @@
+<view class="page">
+    <!-- <----下层左侧导航--->-->
+    <view class="page-bottom {{open ? 'page-state' : ''}}">
+        <view class="page-content">
+            <view bindtap="open_list" wx:for-items="{{nav_list}}" class="page-list">
+                <text>{{item}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- <----上层右侧展示页面--->-->
+    <view class="page-top">
+        <!-- <----上层右侧展示页面遮罩层--->-->
+        <view class="page-mask {{open ? '' : 'page-mask-show'}}" bindtap="offCanvas"></view>
+        <image src='https://www.che3721.com/applet/images/index/mbh@3x.png'></image>
+        <!-- <----列表按钮--->-->
+        <image class="left-nav" bindtap="offCanvas" src="https://www.che3721.com/applet/images/index/sousu@3x.png"></image>
+    </view>
+</view>

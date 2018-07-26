@@ -1,0 +1,62 @@
+
+ <view class="contant" wx:if="{{corporationId == 'true'}}">
+    <view class='header-bar border-top'>
+        <image class='img' src='{{headerimg}}'></image>
+        <view class='herder-text'>
+            <label class='title'>{{corporationName}}</label>
+            <text class='text'>{{Name}}</text>
+            <text class='text'>{{phone}}</text>
+        </view>
+        <image class='icon-jian icon-top' src='https://www.che3721.com/applet/images/upload/arrow@3x.png'></image>
+    </view>
+    <view class='list-ul'>
+        <view class='list-li'  bindtap='clickhrefto' data-href="/pages/shop/shop">
+            <image class='img' src='https://www.che3721.com/applet/images/personal/wddp@3x.png'></image>
+            <text class='text'>我的店铺</text>
+            <image class='icon-jian' src='https://www.che3721.com/applet/images/upload/arrow@3x.png'></image>
+        </view>
+        <view class='list-li'  bindtap='clickhref' data-href="/pages/upload/upload">
+            <image class='img' src='https://www.che3721.com/applet/images/personal/fbcl@3x.png'></image>
+            <text class='text'>发布车辆</text>
+            <image class='icon-jian' src='https://www.che3721.com/applet/images/upload/arrow@3x.png'></image>
+        </view>
+        <view class='list-li'>
+            <image class='img' src='https://www.che3721.com/applet/images/personal/wdsc@3x.png'></image>
+            <text class='text'>我的收藏</text>
+            <image class='icon-jian' src='https://www.che3721.com/applet/images/upload/arrow@3x.png'></image>
+        </view>
+        <view class='list-li'>
+            <image class='img' src='https://www.che3721.com/applet/images/personal/wdgz@3x.png'></image>
+            <text class='text'>我的关注</text>
+            <image class='icon-jian' src='https://www.che3721.com/applet/images/upload/arrow@3x.png'></image>
+        </view>
+        <view class='list-li'>
+            <image class='img' src='https://www.che3721.com/applet/images/personal/dycl@3x.png'></image>
+            <text class='text'>订阅车辆</text>
+            <image class='icon-jian' src='https://www.che3721.com/applet/images/upload/arrow@3x.png'></image>
+        </view>
+        <view class='list-li'>
+            <image class='img' src='https://www.che3721.com/applet/images/personal/dpgl@3x.png'></image>
+            <text class='text'>店铺管理</text>
+            <image class='icon-jian' src='https://www.che3721.com/applet/images/upload/arrow@3x.png'></image>
+        </view>
+        <view class='list-li'>
+            <image class='img' src='https://www.che3721.com/applet/images/personal/wdfb@3x.png'></image>
+            <text class='text'>我的发布</text>
+            <image class='icon-jian' src='https://www.che3721.com/applet/images/upload/arrow@3x.png'></image>
+        </view>
+    </view>
+    <view class='btn-buttom'>
+        <button>退出登录</button>
+    </view>
+</view> 
+ <view class='no-vip' wx:else>
+    <view class='header-img'>
+        <image class='bg-img' src='https://www.che3721.com/applet/images/personal/fhy-bg_jpg@3x.png'></image>
+        <view class='cont'>
+            <image class='header-img' src='{{headerimg}}'></image>
+            <text class='text'>{{corporationName}}</text>
+        </view>
+    </view>
+    
+</view> 

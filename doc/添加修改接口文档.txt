@@ -1,0 +1,285 @@
+域名端口：  http://localhost:9900/
+https://39.107.248.49:443/
+https://www.che3721.com/
+
+在请求头中加入 openid 和 token
+
+
+1、接口描述： 添加用户
+   路由： WriteAccount/AddAccount
+   参数：
+   {
+	Wechat: 微信号,
+	WechatName: 昵称,
+	OpenId: 开放id,
+	Corporation: 公司,
+	Phone: 手机,
+	Name: 名称,
+	Sex: 性别(可空),
+	Email: 邮箱(可空),
+	Logo: 头像(可空)
+    }
+
+2、接口描述： 修改用户
+   路由： WriteAccount/UpdateAccount
+   参数：
+   {
+	OpenId: 开放id,
+	Wechat: 微信号(可空),
+	WechatName: 昵称(可空),
+	Corporation: 公司(可空),
+	Phone: 手机(可空),
+	Name: 名称(可空),
+	Sex: 性别(可空),
+	Email: 邮箱(可空),
+	Logo: 头像(可空),
+	State: 状态(可空)
+   }
+   
+3、接口描述： 添加公司
+   路由： WriteAccount/AddCorporation
+   参数：
+   {
+	Name: 名称,
+	Address: 地址,
+	Presentation: 简介(可空),
+	FixPhone: 固话(可空),
+	Image: 店面图片(可空)
+    }   
+	
+4、接口描述： 修改公司
+   路由： WriteAccount/UpdateCorporation
+   参数：
+   {
+	CorporationId: 公司id,
+	Name: 名称(可空),
+	Address: 地址(可空),
+	Presentation: 简介(可空),
+	FixPhone: 固话(可空),
+	Image: 店面图片(可空),
+	State: 状态(可空)
+   }   
+   
+5、接口描述： 添加车辆信息
+   路由： WriteCar/AddCarInfo
+   参数：
+   {
+	BrandId: 品牌,
+	SeriesId: 车系,
+	AccountId: 创建者,
+	CorporationId: 公司,
+	Name: 品牌车系车型,
+	GuidePrice: 指导价,
+	SellingPrice: 售价,
+	BasePrice: 低价,
+	CarDrive: 驱动,
+	CarEnergy: 能源,
+	CarGearbox: 变速箱,
+	CarSeat: 座位数,
+	CarEmissionStandard: 排放标准,
+	CarActivity: 活动类型(可空),
+	Appearance: 外观(可空),
+	Interior: 内饰(可空),
+	CarConfig: 配置(可空),
+	CarLicenseTime: 上牌时间(可空),
+	CarAge: 出产日期(可空),
+	Mileage: 表显里程(可空),
+	Emission: 排量(可空),
+	Images: 图片数组(可空)
+   }
+   
+   {
+	"request":{
+
+	"BrandId": "5b408ab9d831b138d4f7bbf6",
+	"SeriesId": "5b408ab9d831b138d4f7bc01",
+	"AccountId": "hch302",
+	"CorporationId": "5b408ab9d831b138d4f7bbef",
+	"Name": "品牌车系车型",
+	"GuidePrice": 110,
+	"SellingPrice": 100,
+	"BasePrice": 95,
+	"CarDrive": 1,
+	"CarEnergy": 1,
+	"CarGearbox": 1,
+	"CarSeat": 3,
+	"CarEmissionStandard": 4,
+	"CarActivity": 1,
+	"Appearance": "外观(可空)",
+	"Interior": "内饰(可空)",
+	"CarConfig": "配置(可空)",
+	"CarLicenseTime": "2018-07-08 01:30:48",
+	"CarAge": "2018-07-08 01:30:48",
+	"Mileage":0.1,
+	"Emission": 2.4,
+	"Images":[" 图片数组(可空)"]
+	
+	}
+	
+}
+   
+6、接口描述： 修改车辆信息
+   路由： WriteCar/UpdateCarInfo
+   参数：
+   {
+	CarInfoId: 车辆id,
+	GuidePrice: 指导价(可空),
+	State: 状态(可空),
+	SellingPrice: 售价(可空),
+	BasePrice: 低价(可空),
+	CarDrive: 驱动(可空),
+	CarEnergy: 能源(可空),
+	CarGearbox: 变速箱(可空),
+	CarSeat: 座位数(可空),
+	CarEmissionStandard: 排放标准(可空),
+	CarActivity: 活动类型(可空),
+	Appearance: 外观(可空),
+	Interior: 内饰(可空),
+	CarConfig: 配置(可空),
+	CarLicenseTime: 上牌时间(可空),
+	CarAge: 出产日期(可空),
+	Mileage: 表显里程(可空),
+	Emission: 排量(可空),
+	Images: 图片数组(可空)
+   }  
+   
+   {
+	"request":{
+     "CarInfoId":"5b41021ceef6e114bc2a10e6",
+	"GuidePrice": 30.70,
+	"state":2,
+	"SellingPrice": 24.78,
+	"BasePrice": 24.00,
+	"CarDrive": 1,
+	"CarEnergy": 1,
+	"CarGearbox": 1,
+	"CarSeat": 3,
+	"CarEmissionStandard": 4,
+	"CarActivity": 1,
+	"Appearance": "白色",
+	"Interior": "黑",
+	"CarConfig": "配置(可空)",
+	"CarLicenseTime": "",
+	"CarAge": "",
+	"Mileage":0,
+	"Emission": 2.0,
+	"Images":[" 图片数组(可空)"]
+	
+	}
+	
+}
+
+7、接口描述： 添加汽车品牌
+   路由： WriteCar/AddCarBrand
+   参数：
+   {
+	Name: 品牌名,
+	Capital: 首字母,
+	BrandLogo: 品牌图片,
+	BrandType: 品牌类别,
+	BrandCountry: 国别
+   }
+   
+   {
+	"request":{
+     "Name": "品牌名",
+	"Capital": "首字母",
+	"BrandLogo": "品牌图片",
+	"BrandType": 2,
+	"BrandCountry": 1
+	
+	}
+	
+}
+   
+8、接口描述： 修改汽车品牌
+   路由： WriteCar/UpdateCarBrand
+   参数：
+   {
+	CarBrandId: 品牌Id,
+	Name: 品牌名(可空),
+	Capital: 首字母(可空),
+	BrandLogo: 品牌图片(可空),
+	BrandType: 品牌类别(可空),
+	BrandCountry: 国别(可空),
+	State: 状态(可空)
+    }
+	
+	{
+	"request":{
+		"CarBrandId": "5b4161bcb47dd78f140dfd60",
+     "Name": "本田",
+	"Capital": "B",
+	"BrandLogo": "品牌图片",
+	"BrandType": 2,
+	"BrandCountry": 2
+	
+	}
+	
+   }
+	
+9、接口描述： 添加汽车车系
+   路由： WriteCar/AddCarSeries
+   参数：
+   {
+	Name: 车系名,
+	ParentId: 品牌Id,
+	SeriesGrade: 车系级别
+   }
+   
+   {
+	"request":{
+		"ParentId": "5b4161bcb47dd78f140dfd60",
+     "Name": "杰德",
+	"SeriesGrade":4
+	
+	}
+	
+   }
+   
+10、接口描述： 修改汽车车系
+   路由： WriteCar/UpdateCarSeries
+   参数：
+   {
+	CarSeriesId: 车系Id,
+	Name: 车系名(可空),
+	ParentId: 品牌Id(可空),
+	SeriesGrade: 车系级别(可空),
+	State: 状态(可空)
+    }   
+   {
+	"request":{
+		"CarSeriesId": "5b4164eb0df43a3cd8da2adf",
+     "Name": "杰德",
+     "ParentId": "",
+	"SeriesGrade":4,
+	"State": 2
+	}
+	
+    }
+   
+   
+11、接口描述： 添加图片
+   路由： file/uploadajax
+   参数：
+   {
+	files: 图片数组,
+	
+    }   
+   返回的参数：
+   "response": {
+        "urls": [
+            "2018072122180850792789.png",
+            "2018072122180850826613.png"
+        ],
+        "user_id": null,
+        "formfiles": null,
+        "img_base64": null
+    },
+   
+   
+   
+   
+   
+   
+   

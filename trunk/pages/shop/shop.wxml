@@ -1,0 +1,85 @@
+
+<view class="contaner">
+    <!-- 头部滚动 -->
+    <view class='header-block'>
+        <swiper class='swiper-index' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" circular="{{circular}}">
+            <block class="img-bar" wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <image src="{{item}}" data-rjs="{{datarjs}}" mode='widthFix' class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class='header-slogan'>
+        本店主要经营，新车、二手车豪华品牌，以真诚的服务期待您的光临
+    </view>
+    <view class='header-address'>
+        <image class='icon-address' src='https://www.che3721.com/applet/images/shop/dd@3x.png'></image>
+        <text class='text-address'>北京市朝阳区工人体育场北路21号体育场北路21号体育场北路21号体育场北路</text>
+    </view>
+    <view class='header-address'>
+        <image class='icon-address' src='https://www.che3721.com/applet/images/shop/dh@3x.png'></image>
+        <text class='text-address'>13845698745</text>
+        <navigator class='fix-btn'>免费咨询</navigator>
+    </view>
+    <!-- tab模块 -->
+    <view class="swiper-tab">
+        <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">最新<view class='iconbot'></view> </view>
+        <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">全部<view class='iconbot'></view></view>
+    </view>
+
+    <swiper class='tabswiper' current="{{currentTab}}" duration="300" autoHeight="true"  bindchange="swiperTab">
+        <swiper-item class="ul" autoHeight="true">
+            <view class='li'>
+                <image class='list-img' src='https://www.che3721.com/applet/images/index/ad_jpg@3x.png'></image>
+                <view class='list-bar'>
+                    <text class='title'>奔驰C，2010款180经典型，3.0T自动挡</text>
+                    <label class='label'>2014年12月 4.5万公里</label>
+                    <view class='price'>￥10万 <label class='org-p'>￥11.6万</label> </view>
+                </view>
+            </view>
+            <view class='li'>
+                <image class='list-img' src='https://www.che3721.com/applet/images/index/ad_jpg@3x.png'></image>
+                <view class='list-bar'>
+                    <text class='title'>奔驰C，2010款180经典型，3.0T自动挡</text>
+                    <label class='label'>2014年12月 4.5万公里</label>
+                    <view class='price'>￥10万 <label class='org-p'>￥11.6万</label> </view>
+                </view>
+            </view>
+            <view class='li'>
+                <image class='list-img' src='https://www.che3721.com/applet/images/index/ad_jpg@3x.png'></image>
+                <view class='list-bar'>
+                    <text class='title'>奔驰C，2010款180经典型，3.0T自动挡</text>
+                    <label class='label'>2014年12月 4.5万公里</label>
+                    <view class='price'>￥10万 <label class='org-p'>￥11.6万</label> </view>
+                </view>
+            </view>
+        </swiper-item>
+        <swiper-item class="ul" autoHeight="true">
+            <view class='li'>
+                <image class='list-img' src='https://www.che3721.com/applet/images/index/ad_jpg@3x.png'></image>
+                <view class='list-bar'>
+                    <text class='title'>奔驰C，2010款180经典型，3.0T自动挡</text>
+                    <label class='label'>2014年12月 4.5万公里</label>
+                    <view class='price'>￥10万 <label class='org-p'>￥11.6万</label> </view>
+                </view>
+            </view>
+            <view class='li'>
+                <image class='list-img' src='https://www.che3721.com/applet/images/index/ad_jpg@3x.png'></image>
+                <view class='list-bar'>
+                    <text class='title'>奔驰C，2010款180经典型，3.0T自动挡</text>
+                    <label class='label'>2014年12月 4.5万公里</label>
+                    <view class='price'>￥10万 <label class='org-p'>￥11.6万</label> </view>
+                </view>
+            </view>
+            <view class='li'>
+                <image class='list-img' src='https://www.che3721.com/applet/images/index/ad_jpg@3x.png'></image>
+                <view class='list-bar'>
+                    <text class='title'>奔驰C，2010款180经典型，3.0T自动挡</text>
+                    <label class='label'>2014年12月 4.5万公里</label>
+                    <view class='price'>￥10万 <label class='org-p'>￥11.6万</label> </view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

@@ -1,0 +1,191 @@
+域名端口：  http://localhost:9900/
+
+https://39.107.248.49:443/
+https://www.che3721.com/
+
+小程序样式图片：/applet/images/
+品牌图片：/applet/images/cartool/
+上传的图片：/upload/image/
+
+在请求头中加入 openid 和 token
+
+1、接口描述： 根据用户openid获得用户基本信息
+   路由： QueryAccount/AccountSimple
+   参数：
+   {OpenId:开放id}
+
+2、接口描述： 根据用户openid获得用户信息包含公司信息
+   路由： QueryAccount/AccountInfo
+   参数：
+   {OpenId:开放id}
+   
+3、接口描述： 根据用户openid获得公司基本信息
+   路由： QueryAccount/Corporation
+   参数：
+   {OpenId:开放id}
+	
+4、接口描述： 根据公司id获得公司信息
+   路由： QueryAccount/CorporationInfo
+   参数：
+   {CorporationId:开放id}
+   
+5、接口描述： 根据code获得登录状态token
+   路由： QueryAccount/Login
+   参数：
+   {Code:用户登录凭证（有效期五分钟）,WechatName:微信昵称,Sex:性别,Logo:头像}
+   
+   
+5、接口描述： 查询所有品牌
+   路由： QueryCar/BrandAll
+   参数：
+  
+   
+6、接口描述： 查询热门品牌
+   路由： QueryCar/BrandHot
+   参数：
+   {PageSize:个数(可选，默认10)}
+
+7、接口描述： 查询某个品牌下的车系
+   路由： QueryCar/BrandSeries
+   参数：
+  {BrandId:品牌id}
+   
+8、接口描述： 查询某台太车辆的信息
+   路由： QueryCar/CarInfo
+   参数：
+   {CarId:车辆}
+	
+9、接口描述： 筛选某台车辆之前的车辆
+   路由： QueryCar/BeforeFilterCars
+   参数：
+{
+	IndexCarId: 索引车辆,
+	BrandId: 品牌id(可选),
+	SeriesId: 车系id(可选),
+	CarActivity: 活动类型(可选),
+	SeriesGrade: 车系级别(可选),
+	BrandCountry: 国别(可选),
+	CarDrive: 驱动(可选),
+	CarEnergy: 能源(可选),
+	CarGearbox: 变速箱(可选),
+	CarSeat: 座位(可选),
+	PageSize: 台数(可选，默认10),
+	SortType: 排序类型(默认按时间),
+	Ascending: 是否升序(默认降序)
+}
+
+{
+	"request":{
+		"IndexCarId": "5b417c11602a250bb445fe5e",
+        "brandId": "5b408ab9d831b138d4f7bbf8",
+        "seriesId": "",
+        "seriesGrade": 16,
+        "brandCountry": 1,
+        "carActivity": 1,
+        "carDrive": 0,
+        "carEnergy": 1,
+        "carGearbox": 2,
+        "carSeat": 4,
+        "pageSize": 2,
+        "sortType": 1,
+        "ascending": false
+	}
+	
+}
+   
+10、接口描述： 筛选某台太车辆之后的车辆(索引车辆为空，获取最新的几台车辆)
+   路由： QueryCar/LaterFilterCars
+   参数：
+{
+	IndexCarId: 索引车辆(可选),
+	BrandId: 品牌id(可选),
+	SeriesId: 车系id(可选),
+	CarActivity: 活动类型(可选),
+	SeriesGrade: 车系级别(可选),
+	BrandCountry: 国别(可选),
+	CarDrive: 驱动(可选),
+	CarEnergy: 能源(可选),
+	CarGearbox: 变速箱(可选),
+	CarSeat: 座位(可选),
+	PageSize: 台数(可选，默认10),
+	SortType: 排序类型(默认按时间),
+	Ascending: 是否升序(默认降序)
+}
+
+{
+	"request":{
+		"IndexCarId": "5b417c11602a250bb445fe5e",
+        "brandId": "5b408ab9d831b138d4f7bbf8",
+        "seriesId": "",
+        "seriesGrade": 16,
+        "brandCountry": 1,
+        "carActivity": 1,
+        "carDrive": 0,
+        "carEnergy": 1,
+        "carGearbox": 2,
+        "carSeat": 4,
+        "pageSize": 2,
+        "sortType": 1,
+        "ascending": false
+	}
+	
+}  
+   
+11、接口描述： 查询某个店铺下的某台太车辆之后的车辆(索引车辆为空，获取最新的几台车辆)
+   路由： QueryCar/LaterStoreCars
+   参数：
+{
+	CorporationId: 店铺,
+	IndexCarId: 索引车辆(可选),
+	PageSize: 台数(可选，默认10)
+}   
+   
+12、接口描述： 查询某个店铺下的某台太车辆之前的车辆
+   路由： QueryCar/BeforeStoreCars
+   参数：
+{
+	CorporationId: 店铺,
+	IndexCarId: 索引车辆,
+	PageSize: 台数(可选，默认10)
+}
+
+13、接口描述： 查询某个人发布的(在售、下架)某台太车辆之后的车辆(索引车辆为空，获取最新的几台车辆)
+   路由： QueryCar/LaterUserCars
+   参数：
+{
+	OpenId: 用户,
+	CarSell: 销售情况(可选，默认0在售),
+	IndexCarId: 索引车辆(可选),
+	PageSize: 台数(可选，默认10)
+}
+
+14、接口描述： 查询某个人发布的(在售、下架)某台太车辆之前的车辆
+   路由： QueryCar/BeforeUserCars
+   参数：
+{
+	OpenId: 用户,
+	CarSell: 销售情况(可选，默认0在售),
+	IndexCarId: 索引车辆,
+	PageSize: 台数(可选，默认10)
+}
+
+15、接口描述： 查询今天发布的某台太车辆之后的车辆(索引车辆为空，获取最新的几台车辆)
+   路由： QueryCar/LaterTodayCars
+   参数：
+{
+	IndexCarId: 索引车辆(可选),
+	PageSize: 台数(可选，默认10)
+}
+
+16、接口描述： 查询今天发布的某台太车辆之前的车辆
+   路由： QueryCar/BeforeTodayCars
+   参数：
+{
+	IndexCarId: 索引车辆,
+	PageSize: 台数(可选，默认10)
+}
+
+
+
+   
+   

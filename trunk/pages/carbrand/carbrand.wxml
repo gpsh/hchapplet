@@ -1,0 +1,30 @@
+<view class="page">
+    <!-- <----顶层右侧导航--->-->
+    <view class="page-bottom {{open ? 'page-state' : ''}}">
+        <view class="page-content contant">
+        <view class='list-ul'>
+            <view class='list-li' bindtap="offCanvas" wx:for="{{nav_list}}">
+                <image class='img' src='https://www.che3721.com/applet/images/cartool/{{item.brandLogo}}'></image>
+                <text class='text'>{{item.name}}</text>
+            </view>
+        </view>
+        </view>
+    </view>
+    <!-- <----底层展示页面--->-->
+    <view class="page-top {{open ? 'overfool-none' : ''}}">
+        <!-- <----上层右侧展示页面遮罩层--->-->
+        <view class="page-mask {{open ? '' : 'page-mask-show'}}" bindtap="offCanvas"></view>
+        <view class="contant">
+            <view class='list-ul'>
+                <view class='list-li' bindtap="clickhref" data-href='/pages/recommend/recommend'>全部</view>
+            </view>
+            <view class='list-ul' wx:for="{{list}}">
+                <view class='list-li'>{{item.capital}}</view>
+                <view class='list-li' bindtap="offCanvas" wx:for="{{item.values}}" wx:for-item="items" data-carid="{{items.id}}">
+                    <image class='img' src='https://www.che3721.com/applet/images/cartool/{{items.brandLogo}}'></image>
+                    <text class='text'>{{items.name}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,20 @@
+{
+    "pages": [
+        "pages/logs/logs",
+        "pages/index/index",
+        "pages/upload/upload",
+        "pages/personal/personal",
+        "pages/carbrand/carbrand",
+        "pages/datalis/datalis",
+        "pages/recommend/recommend",
+        "pages/screen/screen",
+        "pages/shop/shop",
+        "pages/my/my"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "black"
+    }
+}

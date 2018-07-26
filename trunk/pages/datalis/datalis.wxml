@@ -1,0 +1,159 @@
+<view class='contaner'>
+    <!-- 头部滚动 -->
+    <view class='header-block'>
+        <swiper class='swiper-index' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" circular="{{circular}}">
+            <block class="img-bar" wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <image src="{{item}}" data-rjs="{{datarjs}}" mode='widthFix' class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- 车辆基本说明 -->
+    <view class='cartip'>
+        <text class='car-tip-text display-block'>林肯-MKC 2014款 2.0T 四驱尊雅型</text>
+        <label class='car-tip-lable display-block padding-10'>指导价：43.18万</label>
+        <view class='car-tip-text color-red'>￥25万 <label class='car-tip-lable text-deco'>￥25.46万</label> </view>
+    </view>
+    <!-- 车辆基本信息 -->
+    <view class='carbasic carbasic-top carbasic-border'>
+        <view class='basic-title'>车辆基本信息</view>
+        <view class='basic-ul'>
+            <view class='basic-li'>
+                <text class='li-data'>2.1万公里</text>
+                <label class='li-title'>表里程数</label>
+            </view>
+            <view class='basic-li'>
+                <text class='li-data'>2.1万公里</text>
+                <label class='li-title'>表里程数</label>
+            </view>
+            <view class='basic-li'>
+                <text class='li-data'>2.1万公里</text>
+                <label class='li-title'>表里程数</label>
+            </view>
+            <view class='basic-li'>
+                <text class='li-data'>2.1万公里</text>
+                <label class='li-title'>表里程数</label>
+            </view>
+            <view class='basic-li'>
+                <text class='li-data'>2.1万公里</text>
+                <label class='li-title'>表里程数</label>
+            </view>
+            <view class='basic-li'>
+                <text class='li-data'>2.1万公里</text>
+                <label class='li-title'>表里程数</label>
+            </view>
+            <view class='basic-li'>
+                <text class='li-data'>2.1万公里</text>
+                <label class='li-title'>表里程数</label>
+            </view>
+            <view class='basic-li'>
+                <text class='li-data'>2.1万公里</text>
+                <label class='li-title'>表里程数</label>
+            </view>
+        </view>
+    </view>
+    <view class='carbasic carbasic-border'>
+        <view class='basic-ul padding-10'>
+            <view class='basic-li text-center'>
+                <image class='li-img' src='https://www.che3721.com/applet/images/datalis/dcyx@3x.png'></image>
+                <label class='li-label'>倒车影像</label>
+            </view>
+            <view class='basic-li text-center'>
+                <image class='li-img' src='https://www.che3721.com/applet/images/datalis/dcyx@3x.png'></image>
+                <label class='li-label'>倒车影像</label>
+            </view>
+            <view class='basic-li text-center'>
+                <image class='li-img' src='https://www.che3721.com/applet/images/datalis/dcyx@3x.png'></image>
+                <label class='li-label'>倒车影像</label>
+            </view>
+            <view class='basic-li text-center'>
+                <image class='li-img' src='https://www.che3721.com/applet/images/datalis/dcyx@3x.png'></image>
+                <label class='li-label'>倒车影像</label>
+            </view>
+        </view>
+    </view>
+    <view class='btn-datalis'>
+        查看详细配置>>
+    </view>
+
+    <!-- 公司介绍 -->
+    <view class='company'>
+        <view class='company-man'>
+            <view class='man-info'>
+                <image class='man-info-head' src='https://www.che3721.com/applet/images/personal/tx@3x.png'></image>
+                <view class='man-info-bar'>
+                    <text class='info-comname'>北京大马汽车销售有限公司</text>
+                    <label class='info-name'>张先生 
+                        <text class='info-num'>12569874563</text> 
+                    </label>
+                </view>
+            </view>
+            <view class='man-btn'>
+                 <navigator class='btn-look' url=''>咨询看车</navigator>
+            </view>
+        </view>
+        <view class='company-man'>
+            <view class='man-info bar-ul'>
+                <view class='bar-li'>
+                    <view class='border'></view>
+                    <text class='li-data'>20</text>
+                    <label class='li-title'>全部上架</label>
+                </view>
+                <view class='bar-li'>
+                    <view class='border'></view>
+                    <text class='li-data'>3</text>
+                    <label class='li-title'>上新</label>
+                </view>
+                <view class='bar-li'>
+                    <view class='border'></view>
+                    <text class='li-data'>5</text>
+                    <label class='li-title'>推荐</label>
+                </view>
+            </view>
+            <view class='man-btn'>
+                 <navigator url='/pages/shop/shop'>
+                    <image class='icon-hous' src='https://www.che3721.com/applet/images/datalis/jdgg@3x.png'></image> 
+                    进店逛逛
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <!-- 常见问题 -->
+    <view class='helpbar-ul'>
+        <view class='help-header'>常见问题</view>
+        <view class='bar-li'>
+            <text class='li-icon'>·</text>
+            <navigator class='li-title'>服务费怎么算？</navigator>
+        </view>
+        <view class='bar-li'>
+            <text class='li-icon'>·</text>
+            <navigator class='li-title'>能贷款吗？</navigator>
+        </view>
+        <view class='bar-li'>
+            <text class='li-icon'>·</text>
+            <navigator class='li-title'>车辆怎么过户？</navigator>
+        </view>
+    </view>
+    <view class='bar-hui'></view>
+    <!-- 预约看车 -->
+    <view class='fix-bar'>
+        <view class='bar-ul'>
+            <view class='bar-li'>
+                <image src='https://www.che3721.com/applet/images/datalis/sc@3x.png'></image>
+                <label class='li-title'>收藏</label>
+            </view>
+            <view class='bar-li'>
+                <image src='https://www.che3721.com/applet/images/datalis/dy@3x.png'></image>
+                <label class='li-title'>订阅</label>
+            </view>
+            <view class='bar-li'>
+                <image src='https://www.che3721.com/applet/images/datalis/db@3x.png'></image>
+                <label class='li-title'>对比</label>
+            </view>
+        </view> 
+        <view class='bar-btn'>
+            预约看车
+        </view>
+    </view>
+</view>

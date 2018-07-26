@@ -1,0 +1,12 @@
+<!--logs.wxml-->
+<view class="container log-list">
+    <!--wxml-->
+    <!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
+    <open-data class="img-head" type="userAvatarUrl"></open-data>
+    <open-data class="text-head" type="userNickName"></open-data>
+    <!-- 需要使用 button 来授权登录 -->
+    <button class='btn-login' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+    <view wx:else>请升级微信版本</view>
+    <image src="https://www.che3721.com/applet/images/common/logo.png" class="logo-img"></image>
+    <text class="log-item">华车会小程序</text>
+</view>

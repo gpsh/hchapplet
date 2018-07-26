@@ -1,0 +1,102 @@
+<view class="contant">
+    <!-- 车型 -->
+    <view class='car-bar carmodel'>
+        <text class='h3'>车型</text>
+        <view class='ul'>
+            <view class="li {{item.checked?'active':''}}" bindtap="chooseItem" data-id='{{item.id}}' wx:for="{{carmodellist}}" wx:for-index="idx" data-idx="{{idx}}">
+                <button class='btn' type='default'>{{item.name}}</button>
+            </view>
+        </view>
+    </view>
+    <view class='bar-xian'></view>
+    <!-- 车龄 -->
+    <view class='car-bar slider-style'> 
+        <text class='h3'>车龄</text><text class='color-hui'>(单位:年)</text><text class='color-hui font-right'>{{begindata>enddata?"提示：结束年份要大于初始年份":begindata}}-{{enddata==10?"不限":enddata}}年</text>
+        <view class="body-view">
+            <slider bindchange="slider2change" step='2' max='10' color='#efefef' value='{{enddata}}' selected-color='#ff6e61' block-size='20' block-color='#fefefe'/>
+            <slider class='slider2' bindchange="slider3change" step='2' max='10' value='{{begindata}}' color='rgba(0,0,0,0)' selected-color='#efefef' block-size='20' block-color='#fefefe'/>
+        </view>
+        <view class='ul'>
+            <view class='li'>0</view>
+            <view class='li'>2</view>
+            <view class='li'>4</view>
+            <view class='li'>6</view>
+            <view class='li'>8</view>
+            <view class='li'>不限</view>
+        </view>
+    </view>
+    <view class='bar-xian'></view>
+    <!-- 行驶里程 -->
+    <view class='car-bar slider-style'>
+        <text class='h3'>行驶里程</text><text class='color-hui'>(单位:万公里)</text><text class='color-hui font-right'>{{beginmileage}}-{{endmileage==20?"不限":endmileage}}万公里</text>
+        <view class="body-view">
+            <slider bindchange="slider4change" step='4' max='20' color='#efefef' value='{{endmileage}}' selected-color='#ff6e61' block-size='20' block-color='#fefefe'/>
+            <slider class='slider2' bindchange="slider5change" step='4' max='20' value='{{beginmileage}}' color='rgba(0,0,0,0)' selected-color='#efefef' block-size='20' block-color='#fefefe'/>
+        </view>
+        <view class='ul'>
+            <view class='li'>0</view>
+            <view class='li'>4</view>
+            <view class='li'>8</view>
+            <view class='li'>12</view>
+            <view class='li'>16</view>
+            <view class='li'>不限</view>
+        </view>
+    </view>
+    <view class='bar-xian'></view>
+    <!-- 排量 -->
+    <view class='car-bar slider-style'>
+        <text class='h3'>排量</text><text class='color-hui'>(单位:升)</text><text class='color-hui font-right'>{{begindisplacement}}-{{enddisplacement==5?"不限":enddisplacement}}升</text>
+        <view class="body-view">
+            <slider bindchange="slider6change" max='5' color='#efefef' value='{{enddisplacement}}' selected-color='#ff6e61' block-size='20' block-color='#fefefe'/>
+            <slider class='slider2' bindchange="slider7change" max='5' value='{{begindisplacement}}' color='rgba(0,0,0,0)' selected-color='#efefef' block-size='20' block-color='#fefefe'/>
+        </view>
+        <view class='ul'>
+            <view class='li'>0</view>
+            <view class='li'>1</view>
+            <view class='li'>2</view>
+            <view class='li'>3</view>
+            <view class='li'>4</view>
+            <view class='li'>不限</view>
+        </view>
+    </view>
+    <view class='bar-xian'></view>
+    <!-- 排放标准 -->
+    <view class='car-bar carmodel'>
+        <text class='h3'>排放标准</text>
+        <view class='ul'>
+            <view class="li {{item.checked?'active':''}}" bindtap="dischargeItem" data-id='{{item.id}}' wx:for="{{discharge}}" wx:for-index="idx" data-idx="{{idx}}">
+                <button class='btn' type='default'>{{item.name}}</button>
+            </view>
+        </view>
+    </view>
+    <view class='bar-xian'></view>
+    <!-- 变速箱 -->
+    <view class='car-bar carmodel'>
+        <text class='h3'>变速箱</text>
+        <view class='ul'>
+            <view class="li {{item.checked?'active':''}}" bindtap="speedItem" data-id='{{item.id}}' wx:for="{{speed}}" wx:for-index="idx" data-idx="{{idx}}">
+                <button class='btn' type='default'>{{item.name}}</button>
+            </view>
+        </view>
+    </view>
+    <view class='bar-xian'></view>
+    <!-- 座位数 -->
+    <view class='car-bar carmodel'>
+        <text class='h3'>座位数</text>
+        <view class='ul'>
+            <view class="li {{item.checked?'active':''}}" bindtap="seatItem" data-id='{{item.id}}' wx:for="{{seat}}" wx:for-index="idx" data-idx="{{idx}}">
+                <button class='btn' type='default'>{{item.name}}</button>
+            </view>
+        </view>
+    </view>
+    <view class='bar-xian'></view>
+    <!-- 燃油类型 -->
+    <view class='car-bar carmodel'>
+        <text class='h3'>燃油类型</text>
+        <view class='ul'>
+            <view class="li {{item.checked?'active':''}}" bindtap="fuelItem" data-id='{{item.id}}' wx:for="{{fuel}}" wx:for-index="idx" data-idx="{{idx}}">
+                <button class='btn' type='default'>{{item.name}}</button>
+            </view>
+        </view>
+    </view>
+</view>

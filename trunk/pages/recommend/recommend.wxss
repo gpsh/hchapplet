@@ -1,0 +1,118 @@
+/* pages/recommend/recommend.wxss */
+
+.contaner {
+    height: auto;
+    width: 100%;
+    background: #f0f0f0;
+}
+
+
+/* 头部 */
+.header{
+    width: 100%;
+    padding: 29rpx 24rpx;
+    border-top: 1rpx solid #e5e5e5;
+    border-bottom: 1rpx solid #e5e5e5;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+}
+.header .ul{
+    line-height: 30rpx;
+}
+.header .li{
+    width: 25%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    border-right: 1rpx solid #e5e5e5;
+}
+.header .li:last-child{
+    border: none;
+}
+.header .li text{
+    margin-right: 14rpx;
+}
+.header .li .text{
+    font-size: 30rpx;
+    position: relative;
+}
+.header .normal .text{
+    color: #000;
+}
+.header .active .text{
+    color: #ff6e61;
+}
+.header .li .icon{
+    position: absolute;
+    width: 18rpx;
+    height: 10rpx;
+    top: 10rpx;
+}
+/* 列表 */
+.list {
+    margin-top: 88rpx;
+}
+.list .ul .li{
+    width: 100%;
+    padding: 30rpx 24rpx;
+    background-color: #fff;
+    margin-top: 20rpx;
+    position: relative;
+}
+.list .ul .li .icon-tip{
+    width: 50rpx;
+    height: 30rpx;
+    position: absolute;
+    top: 50rpx;
+    color: #fff;
+    font-size: 20rpx;
+    text-align: center;
+    line-height: 30rpx;
+    border-radius: 5rpx
+}
+.list .ul .li .icon-bg-red{
+    background-color: #fe535c;
+}
+.list .ul .li .icon-bg-ylo{
+    background-color: #ff9500;
+}
+.list .ul .li:first-child{
+    margin-top: 0;
+}
+.list .ul .li .list-img{
+    width:250rpx;
+    height: 180rpx;
+    border-radius: 5rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+.list .ul .li .list-bar{
+    display: inline-block;
+    vertical-align: middle;
+    width: 452rpx;
+    padding-left: 20rpx;
+}
+.list .list-bar .title{
+    color: #333;
+    font-size: 28rpx;
+    display: block;
+}
+.list .list-bar .label{
+    color: #999;
+    font-size: 24rpx;
+    display: block;
+    padding: 15rpx 0;
+}
+.list .list-bar .price{
+    color: #ff6e61;
+    font-size: 30rpx;
+    display: block;
+}
+.list .list-bar .price .org-p{
+    color: #ccc;
+    font-size: 20rpx;
+    text-decoration: line-through;
+    margin-left: 20rpx;
+}

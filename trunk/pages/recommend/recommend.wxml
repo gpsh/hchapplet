@@ -1,0 +1,101 @@
+<view class='contaner'>
+    <view class='header'>
+        <view class='ul'>
+            <picker class="li {{isCheckeda?'active':'normal'}}" bindtap='clickstylea' bindchange="bindDateChange" mode="date" fields="month" value="{{index}}">
+                <view class='text'>
+                    <text id='time'>{{datatime}}</text>
+                    <image class='icon' wx:if="{{isCheckeda}}" src='https://www.che3721.com/applet/images/recommend/arrow_s@3x.png'></image>
+                    <image class='icon' wx:else="{{isCheckeda}}" src='https://www.che3721.com/applet/images/recommend/arrow@3x.png'></image>
+                </view>
+            </picker>  
+            <picker class="li {{isCheckedb?'active':'normal'}}" bindtap='clickstyleb' bindchange="bindPickerChange" mode="selector" value="{{index}}" range="{{array}}">
+                <view class='text'>
+                    <text>{{datamany}}</text>
+                    <image class='icon' wx:if="{{isCheckedb}}" src='https://www.che3721.com/applet/images/recommend/arrow_s@3x.png'></image>
+                    <image class='icon' wx:else="{{isCheckedb}}" src='https://www.che3721.com/applet/images/recommend/arrow@3x.png'></image>
+                </view>
+            </picker>
+            <picker class="li {{isCheckedc?'active':'normal'}}" bindtap='clickstylec' bindchange="bindbrandChange" mode="selector" value="{{index}}" range="{{arraybrand}}">
+                <view class='text'>
+                    <text>{{databrand}}</text>
+                    <image class='icon' wx:if="{{isCheckedc}}" src='https://www.che3721.com/applet/images/recommend/arrow_s@3x.png'></image>
+                    <image class='icon' wx:else="{{isCheckedc}}" src='https://www.che3721.com/applet/images/recommend/arrow@3x.png'></image>
+                </view>
+            </picker>
+            <navigator class="li {{isCheckedd?'active':'normal'}}" bindtap='clickstyled' url='../screen/screen'>
+                <view class='text'>
+                    <text>筛选</text>
+                    <image class='icon' wx:if="{{isCheckedd}}" src='https://www.che3721.com/applet/images/recommend/arrow_s@3x.png'></image>
+                    <image class='icon' wx:else="{{isCheckedd}}" src='https://www.che3721.com/applet/images/recommend/arrow@3x.png'></image>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view class='list'>
+        <view class="ul" autoHeight="true">
+            <view class='li' bindtap='clickhref' data-href='/pages/datalis/datalis'>
+                <view class='icon-tip icon-bg-red'>最新</view>
+                <image class='list-img' src='https://www.che3721.com/applet/images/index/ad_jpg@3x.png'></image>
+                <view class='list-bar'>
+                    <text class='title'>奔驰C，2010款180经典型，3.0T自动挡</text>
+                    <label class='label'>2014年12月 4.5万公里</label>
+                    <view class='price'>￥10万
+                        <label class='org-p'>￥11.6万</label>
+                    </view>
+                </view>
+            </view>
+            <view class='li' bindtap='clickhref' data-href='/pages/datalis/datalis'>
+                <view class='icon-tip icon-bg-red'>最新</view>
+                <image class='list-img' src='https://www.che3721.com/applet/images/index/ad_jpg@3x.png'></image>
+                <view class='list-bar'>
+                    <text class='title'>奔驰C，2010款180经典型，3.0T自动挡</text>
+                    <label class='label'>2014年12月 4.5万公里</label>
+                    <view class='price'>￥10万
+                        <label class='org-p'>￥11.6万</label>
+                    </view>
+                </view>
+            </view>
+            <view class='li' bindtap='clickhref' data-href='/pages/datalis/datalis'>
+                <view class='icon-tip icon-bg-ylo'>降价</view>
+                <image class='list-img' src='https://www.che3721.com/applet/images/index/ad_jpg@3x.png'></image>
+                <view class='list-bar'>
+                    <text class='title'>奔驰C，2010款180经典型，3.0T自动挡</text>
+                    <label class='label'>2014年12月 4.5万公里</label>
+                    <view class='price'>￥10万
+                        <label class='org-p'>￥11.6万</label>
+                    </view>
+                </view>
+            </view>
+            <view class='li' bindtap='clickhref' data-href='/pages/datalis/datalis'>
+                <image class='list-img' src='https://www.che3721.com/applet/images/index/ad_jpg@3x.png'></image>
+                <view class='list-bar'>
+                    <text class='title'>奔驰C，2010款180经典型，3.0T自动挡</text>
+                    <label class='label'>2014年12月 4.5万公里</label>
+                    <view class='price'>￥10万
+                        <label class='org-p'>￥11.6万</label>
+                    </view>
+                </view>
+            </view>
+            <view class='li' bindtap='clickhref' data-href='/pages/datalis/datalis'>
+                <image class='list-img' src='https://www.che3721.com/applet/images/index/ad_jpg@3x.png'></image>
+                <view class='list-bar'>
+                    <text class='title'>奔驰C，2010款180经典型，3.0T自动挡</text>
+                    <label class='label'>2014年12月 4.5万公里</label>
+                    <view class='price'>￥10万
+                        <label class='org-p'>￥11.6万</label>
+                    </view>
+                </view>
+            </view>
+            <view class='li' bindtap='clickhref' data-href='/pages/datalis/datalis'>
+                <image class='list-img' src='https://www.che3721.com/applet/images/index/ad_jpg@3x.png'></image>
+                <view class='list-bar'>
+                    <text class='title'>奔驰C，2010款180经典型，3.0T自动挡</text>
+                    <label class='label'>2014年12月 4.5万公里</label>
+                    <view class='price'>￥10万
+                        <label class='org-p'>￥11.6万</label>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,35 @@
+.log-list {
+  flex-direction: column;
+  padding: 40rpx;
+  text-align: center
+}
+.logo-img{
+  position: fixed;
+  bottom: 110rpx;
+  width: 70rpx;
+  height: 54rpx;
+  margin-left: 12rpx;
+}
+.log-item {
+  position: fixed;
+  bottom: 50rpx;
+  margin: 10rpx;
+  font-size: 24rpx
+}
+.img-head{
+    margin-top: 100rpx;
+    width: 100rpx;
+    height: 100rpx;
+}
+.text-head{
+    font-size: 30rpx;
+    color: #3c3c3c;
+    margin-top: 20rpx
+}
+.btn-login{
+    margin-top: 200rpx;
+    background-color: #fff7ed;
+    color: #ff6e61;
+    font-size: 30rpx;
+    width: 80%;
+}
